@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Remove default image spacing */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Override for specific cases if needed */
+.inline-image {
+  display: inline;
+  vertical-align: top;
+}
+
+/* Fix markdown spacing issues */
+.prose {
+  line-height: 1.6;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* Remove excessive spacing */
+.prose h1 + p,
+.prose h2 + p,
+.prose h3 + p {
+  margin-top: 0;
+}
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .executive-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .metric-card {
+    @apply bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow;
+  }
+  
+  .case-study-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300;
+  }
+}
