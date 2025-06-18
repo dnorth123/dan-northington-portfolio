@@ -15,8 +15,8 @@ export default function Home() {
                 Digital Transformation Executive
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Director of User Experience driving enterprise-scale transformation with $230M revenue impact, 
-                70% YoY growth achievement, and 16-person team leadership across Fortune 500 organizations.
+                Director of User Experience with proven track record delivering $230M revenue impact, 
+                70% YoY growth achievement, and enterprise-scale digital transformation across Fortune 500 organizations.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#case-studies" className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
@@ -52,7 +52,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-executive-900 mb-4">Executive Impact at Scale</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Proven track record of driving digital transformation and revenue generation across enterprise organizations
+              Proven track record of driving measurable outcomes through strategic design leadership, cross-functional team orchestration, and digital transformation initiatives across Fortune 500 organizations.
             </p>
           </div>
           
@@ -81,8 +81,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Leadership Philosophy */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-executive-900 mb-8">Strategic Leadership Philosophy</h2>
+          
+          <div className="mb-12">
+            <blockquote className="text-xl italic text-gray-700 mb-6">
+              "Exceptional user experiences emerge from the strategic intersection of user needs, business objectives, and technological capabilities. My approach combines data-driven design methodologies with cross-functional team orchestration to deliver measurable outcomes that drive sustainable competitive advantage."
+            </blockquote>
+            <cite className="text-gray-600">— Dan Northington, Digital Transformation Executive</cite>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="capability-card">
+              <Target className="w-8 h-8 text-primary-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-executive-900 mb-3">Strategic Business Alignment</h3>
+              <p className="text-gray-600">Proven expertise in driving organizational transformation through strategic design leadership, cross-functional team management, and measurable business impact delivery.</p>
+            </div>
+            <div className="capability-card">
+              <Users className="w-8 h-8 text-primary-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-executive-900 mb-3">Cross-Functional Leadership</h3>
+              <p className="text-gray-600">Expert in orchestrating diverse teams across product, engineering, and business functions to deliver unified customer experiences and business outcomes.</p>
+            </div>
+            <div className="capability-card">
+              <TrendingUp className="w-8 h-8 text-primary-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-executive-900 mb-3">Measurable Impact Delivery</h3>
+              <p className="text-gray-600">Systematic approach to quantifying design impact through business metrics, ensuring every initiative drives toward organizational success and competitive advantage.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Strategic Case Studies */}
-      <section id="case-studies" className="py-20">
+      <section id="case-studies" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-executive-900 mb-4">Strategic Leadership Portfolio</h2>
@@ -200,7 +232,7 @@ export default function Home() {
       </section>
 
       {/* Executive Competencies */}
-      <section id="experience" className="py-20 bg-gray-50">
+      <section id="experience" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-executive-900 mb-4">Executive Competencies</h2>
@@ -239,17 +271,17 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 bg-executive-navy text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-executive-900 mb-4">Ready to Drive Transformation</h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <h2 className="text-3xl font-bold mb-4">Ready to Drive Transformation</h2>
+          <p className="text-lg mb-8 text-blue-100">
             Let's discuss how strategic UX leadership can generate measurable business impact for your organization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:dan.northington@gmail.com" className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+            <a href="mailto:dan.northington@gmail.com" className="bg-white text-executive-navy px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
               dan.northington@gmail.com
             </a>
-            <a href="tel:404-268-4002" className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors">
+            <a href="tel:404-268-4002" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-executive-navy transition-colors">
               (404) 268-4002
             </a>
           </div>

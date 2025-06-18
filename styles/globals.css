@@ -2,70 +2,130 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Remove default image spacing */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+/* Executive Color System CSS Variables */
+:root {
+  --executive-navy: #1e3a8a;
+  --executive-navy-light: #3b82f6;
+  --executive-navy-dark: #1e40af;
+  --executive-steel: #475569;
+  --executive-silver: #94a3b8;
+  --executive-charcoal: #374151;
+  --executive-slate: #64748b;
+  
+  --impact-success: #059669;
+  --impact-revenue: #dc2626;
+  --impact-efficiency: #2563eb;
+  --impact-innovation: #7c3aed;
 }
 
-/* Override for specific cases if needed */
-.inline-image {
-  display: inline;
-  vertical-align: top;
+/* Custom Executive Styles */
+.executive-gradient {
+  background: linear-gradient(135deg, var(--executive-navy) 0%, var(--executive-navy-dark) 100%);
 }
 
-/* Fix markdown spacing issues */
-.prose {
-  line-height: 1.6;
+.metric-highlight {
+  background: linear-gradient(90deg, var(--impact-success) 0%, var(--impact-efficiency) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.prose h1,
-.prose h2,
-.prose h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.executive-card {
+  background: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  transition: all 0.3s ease;
 }
 
-.prose p {
-  margin-bottom: 1rem;
+.executive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.prose ul,
-.prose ol {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
+/* Typography Enhancements */
+.font-executive {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
-.prose li {
-  margin-bottom: 0.5rem;
+/* Executive Professional Spacing */
+.section-padding {
+  @apply py-20;
 }
 
-/* Remove excessive spacing */
-.prose h1 + p,
-.prose h2 + p,
-.prose h3 + p {
-  margin-top: 0;
+.container-padding {
+  @apply px-4 sm:px-6 lg:px-8;
 }
 
-@layer base {
-  html {
-    font-family: Inter, system-ui, sans-serif;
-  }
+/* Smooth Transitions */
+.transition-executive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@layer components {
-  .executive-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Focus States for Accessibility */
+.focus-executive {
+  @apply focus:outline-none focus:ring-2 focus:ring-executive-navy focus:ring-offset-2;
+}
+
+/* Button Variants */
+.btn-executive-primary {
+  @apply bg-executive-navy text-white px-6 py-3 rounded-lg font-medium shadow-sm hover:bg-executive-navy-dark transition-colors focus-executive;
+}
+
+.btn-executive-secondary {
+  @apply border-2 border-executive-navy text-executive-navy px-6 py-3 rounded-lg font-medium hover:bg-executive-navy hover:text-white transition-colors focus-executive;
+}
+
+/* Professional Cards */
+.card-executive {
+  @apply bg-white rounded-xl border border-neutral-200 shadow-sm hover:shadow-executive transition-all duration-300;
+}
+
+/* Responsive Text Scaling */
+@media (max-width: 640px) {
+  .text-executive-3xl {
+    font-size: 2.5rem;
+    line-height: 1.1;
   }
   
-  .metric-card {
-    @apply bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow;
+  .text-executive-2xl {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Print Styles for Professional Documents */
+@media print {
+  .no-print {
+    display: none !important;
   }
   
-  .case-study-card {
-    @apply bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300;
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #000;
+  }
+  
+  .text-executive-navy {
+    color: #000 !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .text-executive-steel {
+    color: #000;
+  }
+  
+  .text-executive-slate {
+    color: #333;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
